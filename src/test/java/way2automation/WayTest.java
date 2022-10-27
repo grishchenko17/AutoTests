@@ -1,8 +1,10 @@
 package way2automation;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import way.example.BaseTest;
+import way.example.ElementsForWay;
 
-public class TestsForWay extends BaseTest{
+public class WayTest extends BaseTest {
 
     @Test
     public void createUser(){

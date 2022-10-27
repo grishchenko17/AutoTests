@@ -1,10 +1,10 @@
-package way2automation;
+package way.example;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ElementsForWay extends BasePage{
+public class ElementsForWay extends BasePage {
 
     @FindBy(xpath = "//input[@name = 'name']")
     private WebElement firstName;

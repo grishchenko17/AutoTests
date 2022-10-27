@@ -1,9 +1,11 @@
 package farfetch;
 
-import org.junit.Test;
+import base.example.BaseTest;
+import base.example.ElementsForFarfetch;
+import org.junit.jupiter.api.Test;
 
 
-public class TestForFarfetch extends BaseTest{
+public class FarfetchTest extends BaseTest {
 
         @Test
         public void addToCart() {

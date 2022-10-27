@@ -1,4 +1,4 @@
-package way2automation;
+package way.example;
 
 import org.openqa.selenium.WebDriver;
 
