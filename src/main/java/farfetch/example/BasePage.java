@@ -1,4 +1,4 @@
-package base.example;
+package farfetch.example;
 
 import org.openqa.selenium.WebDriver;
 

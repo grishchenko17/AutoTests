@@ -1,6 +1,5 @@
-package base.example;
+package farfetch.example;
 
-import base.example.BasePage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,6 +27,7 @@ public class ElementsForFarfetch extends BasePage {
     private WebElement deleteFromCart;
 
 
+
     public ElementsForFarfetch() {
         driver.get("https://www.farfetch.com/pl/");
         PageFactory.initElements(driver, this);
@@ -40,6 +40,7 @@ public class ElementsForFarfetch extends BasePage {
         giftsButton.click();
         bag.click();
         addToCart.click();
+        goToCart.isDisplayed();
 
 
     }
@@ -53,5 +54,9 @@ public class ElementsForFarfetch extends BasePage {
         addToCart.click();
         goToCart.click();
         deleteFromCart.click();
-}
+
+    }
+
+
+
 }

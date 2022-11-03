@@ -1,5 +1,6 @@
 package way.example;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -36,13 +37,16 @@ public class ElementsForWay extends BasePage {
     @FindBy(xpath = "//input[@type= 'submit']")
     private WebElement button;
 
+    @FindBy(xpath = "//label[@for='email' and @class='error_p']")
+    private WebElement errorMessage;
+
 
     public ElementsForWay() {
         driver.get("https://www.way2automation.com/way2auto_jquery/registration.php#load_box");
         PageFactory.initElements(driver, this);
     }
 
-        public ElementsForWay createUser() {
+    public ElementsForWay createUser() {
         firstName.click();
         firstName.sendKeys("Mary");
         lastName.click();
@@ -63,8 +67,16 @@ public class ElementsForWay extends BasePage {
         return this;
     }
 
+    public WebElement showErrorMessageInEmail() {
+        email.click();
+        email.sendKeys("incorrect", Keys.ENTER);
+        errorMessage.isDisplayed();
+        return errorMessage;
+    }
 
 
 
 
 }
+
+
