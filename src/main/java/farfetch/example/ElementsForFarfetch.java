@@ -20,12 +20,14 @@ public class ElementsForFarfetch extends BasePage {
     @FindBy(xpath = "//button[@aria-label='Add To Bag']")
     private WebElement addToCart;
 
-    @FindBy(xpath = "//a[@aria-label='Go To Bag']")
+    @FindBy(xpath = "//a[text()='Go To Bag']")
     private WebElement goToCart;
 
     @FindBy(xpath = "//button[@title='Remove']")
     private WebElement deleteFromCart;
 
+    @FindBy(xpath = "//p[text()='Your bag is empty']")
+    private WebElement emptyBag;
 
 
     public ElementsForFarfetch() {
@@ -57,6 +59,16 @@ public class ElementsForFarfetch extends BasePage {
 
     }
 
+    public WebElement checkButtonChanged() {
+        goToCart.isDisplayed();
+        return goToCart;
 
 
+    }
+
+    public WebElement checkBagIsEmpty() {
+        emptyBag.isDisplayed();
+        return goToCart;
+
+    }
 }

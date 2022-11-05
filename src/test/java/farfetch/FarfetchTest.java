@@ -14,7 +14,9 @@ public class FarfetchTest extends BaseTest {
         public void addToCart() {
             ElementsForFarfetch tests = new ElementsForFarfetch();
             tests.addToCart();
-
+            tests.checkButtonChanged();
+            WebElement goToCart = tests.checkButtonChanged();
+            Assertions.assertEquals("Go To Bag", goToCart.getText());
 
 
         }
@@ -23,6 +25,10 @@ public class FarfetchTest extends BaseTest {
         public void deleteFromCart() {
             ElementsForFarfetch tests = new ElementsForFarfetch();
             tests.deleteFromCart();
+            tests.checkBagIsEmpty();
+            Assertions.assertTrue(true);
+
+
         }
 
 

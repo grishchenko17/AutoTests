@@ -11,6 +11,7 @@ public class ErrorEmailTest extends BaseTest {
     @Test
     public void errorMessageIsShown() {
 
+
         ElementsForWay e = new ElementsForWay();
         WebElement errorMessage = e.showErrorMessageInEmail();
         Assertions.assertEquals("Please enter a valid email address.", errorMessage.getText());

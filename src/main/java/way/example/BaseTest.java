@@ -12,9 +12,12 @@ import java.time.Duration;
 
 public class BaseTest {
 
+
     protected WebDriver driver;
 
     @BeforeEach
+
+
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
